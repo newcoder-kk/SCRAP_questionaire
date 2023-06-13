@@ -1,4 +1,5 @@
 //selecting all required elements
+
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -20,31 +21,27 @@ let agTotalScore = 0;
 let neuScore = 0;
 let neuTotalScore = 0;
 
-const form = document.querySelector("form"),
-    nextBtn = form.querySelector(".nextBtn"),
-    backBtn = form.querySelector(".backBtn"),
-    allInput = form.querySelectorAll(".first input");
 
+// Get the form container element
+const formContainer = document.querySelector('.container');
+const submitButton = formContainer.querySelector('.submit');
 
-nextBtn.addEventListener("click", () => {
-    allInput.forEach(input => {
-        if (input.value != "") {
-            form.classList.add('secActive');
-        } else {
-            form.classList.remove('secActive');
-        }
-    })
-})
+// Add event listener to the submit button
+submitButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent form submission
 
-backBtn.addEventListener("click", () => {
-    form.classList.remove('secActive');
+    const inputFields = formContainer.querySelectorAll('input, select');
+    const formData = {};
+
+    inputFields.forEach(function (field) {
+        formData[field.name] = field.value;
+    });
+
+    console.log(formData);
+    formContainer.remove();
     info_box.classList.add("activeInfo");
-})
+});
 
-// if startQuiz button clicked
-start_btn.onclick = () => {
-    info_box.classList.add("activeInfo"); //show info box
-}
 
 // if exitQuiz button clicked
 exit_btn.onclick = () => {
