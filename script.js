@@ -9,6 +9,16 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+let openScore = 0;
+let openTotalScore = 0;
+let conScore = 0;
+let conTotalScore = 0;
+let exScore = 0;
+let exTotalScore = 0;
+let agScore = 0;
+let agTotalScore = 0;
+let neuScore = 0;
+let neuTotalScore = 0;
 
 // if startQuiz button clicked
 start_btn.onclick = () => {
@@ -132,12 +142,21 @@ function optionSelected(answer) {
     answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
     console.log("Answered");
     console.log("Questions Answered= " + userScore);
+
+    //update the user scores here
+    if (questions[que_count].marking == 1) {
+        if (questions[que_count].categories === "Openness") {
+
+        }
+    }
+
+
     //}
     /*else {
         answer.classList.add("incorrect"); //adding red color to correct selected option
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
-
+ 
         for (i = 0; i < allOptions; i++) {
             if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer 
                 option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
