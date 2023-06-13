@@ -67,7 +67,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism", "Extraversion"]
     },
     {
@@ -81,7 +81,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -95,7 +95,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -109,7 +109,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -123,7 +123,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -137,7 +137,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -151,7 +151,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -165,7 +165,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness", "Extraversion"]
     },
     {
@@ -179,7 +179,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -193,7 +193,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
 
@@ -208,7 +208,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -222,7 +222,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -236,7 +236,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness", "Extraversion"]
     },
     {
@@ -250,7 +250,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
 
@@ -265,7 +265,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -279,7 +279,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -293,7 +293,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness", "Extraversion"]
     },
     {
@@ -307,7 +307,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness"]
     },
     {
@@ -321,7 +321,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -335,7 +335,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -349,7 +349,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -363,7 +363,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -377,7 +377,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness"]
     },
     {
@@ -391,7 +391,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -405,7 +405,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -419,7 +419,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -433,7 +433,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -447,7 +447,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness"]
     },
 
@@ -462,7 +462,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -476,7 +476,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -490,7 +490,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -504,7 +504,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
 
@@ -519,7 +519,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -533,7 +533,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -547,7 +547,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -561,7 +561,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -575,7 +575,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -589,7 +589,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Agreeableness"]
     },
     {
@@ -603,7 +603,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -617,7 +617,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -631,7 +631,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
     {
@@ -644,7 +644,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -658,7 +658,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Extraversion"]
     },
     {
@@ -672,7 +672,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Conscientiousness"]
     },
     {
@@ -686,7 +686,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Neuroticism"]
     },
     {
@@ -700,7 +700,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: ,
+        marking: 1,
         categories: ["Openness"]
     },
 ];
