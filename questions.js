@@ -561,7 +561,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: 1,
+        marking: 0,
         categories: "Openness"
     },
     {
@@ -631,7 +631,7 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: 0,
+        marking: 1,
         categories: "Openness"
     },
     {
