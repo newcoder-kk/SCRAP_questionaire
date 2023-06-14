@@ -20,14 +20,15 @@ body {
     background-size: cover;
 }
 
+
 .container {
     position: relative;
     max-width: 900px;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 30px;
-    margin: 0 15px;
-    background-color: #fff;
+    margin: 15px;
+    background-color: #8de5f5;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -36,6 +37,13 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: #333;
+}
+
+.container .form-page-logo {
+    padding-left: 40%;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
 }
 
 .container header::before {
@@ -53,13 +61,13 @@ body {
     position: relative;
     margin-top: 16px;
     min-height: 490px;
-    background-color: #fff;
+    background-color: #8de5f5;
     overflow: hidden;
 }
 
 .container form .form {
     position: absolute;
-    background-color: #fff;
+    background-color: #8de5f5;
     transition: 0.3s ease;
 }
 
