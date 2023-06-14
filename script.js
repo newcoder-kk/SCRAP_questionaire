@@ -58,7 +58,7 @@ continue_btn.onclick = () => {
     startTimerLine(0); //calling startTimerLine function
 }
 
-let timeValue = 25;
+let timeValue = 15;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -73,7 +73,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = () => {
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 25;
+    timeValue = 15;
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -243,7 +243,7 @@ function startTimerLine(time) {
     function timer() {
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-        if (time > 549) { //if time value is greater than 549
+        if (time > 649) { //if time value is greater than 549
             clearInterval(counterLine); //clear counterLine
         }
     }
