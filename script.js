@@ -42,7 +42,7 @@ submitButton.addEventListener('click', function (event) {
     info_box.classList.add("activeInfo");
 });
 
-
+//just for commit
 // if exitQuiz button clicked
 exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //hide info box
