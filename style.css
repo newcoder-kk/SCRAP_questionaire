@@ -16,7 +16,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4070f4;
+    background-image: url(Screenshot.png);
+    background-size: cover;
 }
 
 .container {
@@ -209,9 +210,9 @@ form .buttons button,
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+/* body {
     background: #007bff;
-}
+} */
 
 ::selection {
     color: #fff;
