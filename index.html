@@ -32,7 +32,7 @@
                         </div>
                         <div class="input-field">
                             <label>Date of Birth</label>
-                            <input type="date" name="DOB" placeholder="Enter birth date" required>
+                            <input type="date" name="DOB" placeholder="Enter Date of birth" required>
                         </div>
                         <div class="input-field">
                             <label>Email</label>
@@ -52,13 +52,27 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>School Name</label>
-                            <input type="text" name="school" placeholder="Enter your School name" required>
+                            <label>Institution's Name(school/college/work)</label>
+                            <input type="text" name="school" placeholder="Enter your institution's name" required>
                         </div>
                         <div class="input-field">
                             <label>Class</label>
-                            <input type="text" name="Class" placeholder="Enter your class of study" required>
+                            <select required name="Gender">
+                                <option disabled selected>Select Class</option>
+                                <option>class 8-10 th</option>
+                                <option>class 11-12 th</option>
+                                <option>College</option>
+                                <option>Working Professional</option>
+                            </select>
                         </div>
+                        <!-- <div class="input-field">
+                            <label>Category</label>
+                            <select required name="Category">
+                                <option disabled selected>Select Category</option>
+                                <option>I would to have an analysis</option>
+                                <option>I would like to give my data</option>
+                            </select>
+                        </div> -->
                         <div class="input-field">
                             <label>Native State</label>
                             <input type="text" name="State" placeholder="Enter your Home State" required>
@@ -84,7 +98,7 @@
             <div class="info">2. Once you select your answer, it can't be undone.</div>
             <div class="info">3. You can't select any option once time goes off.</div>
             <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">5. You'll get an analysis on the basis of your answers.</div>
         </div>
         <div class="buttons">
             <button class="quit">Exit Quiz</button>

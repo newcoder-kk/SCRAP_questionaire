@@ -263,10 +263,10 @@ function showResult() {
     console.log("Agreeableness scores " + agScore + " out of " + agTotalScore);
     console.log("Neurotism scores " + neuScore + " out of " + neuTotalScore);
 
-    let scoreTag = "<span><p>Openness scores </p>: " + openScore / openTotalScore * 100 + "%</span>" + "<span><p>Consientiousness scores </p>: " + conScore / conTotalScore * 100 + "%</span>" +
-        "<span><p>Extrovertism scores </p>: " + exScore / exTotalScore * 100 + "%</span>" +
-        "<span><p>Agreeableness scores </p>: " + agScore / agTotalScore * 100 + "%</span>" +
-        "<span><p>Neurotism scores </p>: " + neuScore / neuTotalScore * 100 + "%</span>";
+    let scoreTag = "<span><p>Openness scores </p>: " + Math.round(openScore / openTotalScore * 100) + "%</span>" + "<span><p>Consientiousness scores </p>: " + Math.round(conScore / conTotalScore * 100) + "%</span>" +
+        "<span><p>Extrovertism scores </p>: " + Math.round(exScore / exTotalScore * 100) + "%</span>" +
+        "<span><p>Agreeableness scores </p>: " + Math.round(agScore / agTotalScore * 100) + "%</span>" +
+        "<span><p>Neurotism scores </p>: " + Math.round(neuScore / neuTotalScore * 100) + "%</span>";
     scoreText.innerHTML = scoreTag;
     const scoreInfo = {};
     scoreInfo["Openness"] = openScore / openTotalScore;
@@ -274,6 +274,7 @@ function showResult() {
     scoreInfo["Extrovertism"] = exScore / exTotalScore;
     scoreInfo["Agreeableness"] = agScore / agTotalScore;
     scoreInfo["Neurotism"] = neuScore / neuTotalScore;
+
     const scoreInfoJSON = JSON.stringify(scoreInfo);
     localStorage.setItem("Scores", scoreInfoJSON);
     //const prompt = "give me a 100 words description of a person with Openness " + openScore + " out of " + openTotalScore + "Consientiousness scores " + conScore + " out of " + conTotalScore + "Extrovertism scores " + exScore + " out of " + exTotalScore + "Agreeableness scores " + agScore + " out of " + agTotalScore + "Neurotism scores " + neuScore + " out of " + neuTotalScore;

@@ -69,8 +69,8 @@ let questions = [
         ],
         marking: 0,
         categories: "Openness"
-    }];
-/*    {
+    },
+    {
         numb: 6,
         question: "I don't talk a lot",
         answer: "",
@@ -351,8 +351,8 @@ let questions = [
         ],
         marking: 1,
         categories: "Openness"
-    },
-    {
+    }];
+/*    {
         numb: 26,
         question: "I have little to say",
         answer: "",
