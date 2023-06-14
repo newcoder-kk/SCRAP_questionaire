@@ -20,13 +20,14 @@ body {
     background-size: cover;
 }
 
+
 .container {
     position: relative;
     max-width: 900px;
     width: 100%;
     border-radius: 6px;
     padding: 30px;
-    margin: 0 15px;
+    margin: 15px;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -36,6 +37,13 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: #333;
+}
+
+.container .form-page-logo {
+    padding-left: 40%;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
 }
 
 .container header::before {
