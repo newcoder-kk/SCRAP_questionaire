@@ -58,7 +58,7 @@ let questions = [
     },
     {
         numb: 5,
-        question: "I have a rich vocabulary",
+        question: "I have difficulty understanding abstract ( things that exist as ideas, feelings, or qualities ) ideas",
         answer: "",
         options: [
             "Very Inaccurate",
@@ -67,10 +67,10 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: 1,
-        categories: "Extraversion"
-    },
-    {
+        marking: 0,
+        categories: "Openness"
+    }];
+/*    {
         numb: 6,
         question: "I don't talk a lot",
         answer: "",
@@ -128,7 +128,7 @@ let questions = [
     },
     {
         numb: 10,
-        question: "I have difficulty understanding abstract ( things that exist as ideas, feelings, or qualities ) ideas",
+        question: "I have a rich vocabulary",
         answer: "",
         options: [
             "Very Inaccurate",
@@ -137,8 +137,8 @@ let questions = [
             "Moderately Accurate",
             "Very Accurate"
         ],
-        marking: 0,
-        categories: "Openness"
+        marking: 1,
+        categories: "Extraversion"
     },
     {
         numb: 11,
@@ -703,7 +703,7 @@ let questions = [
         marking: 1,
         categories: "Openness"
     },
-];
+];*/
 // you can uncomment the below codes and make duplicate as more as you want to add question
 // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 

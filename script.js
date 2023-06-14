@@ -162,12 +162,6 @@ function optionSelected(answer) {
     console.log("Questions Answered= " + userScore);
 
     //update the user scores here
-    if (questions[que_count].marking == 1) {
-        if (questions[que_count].categories === "Openness") {
-
-        }
-    }
-
 
     //}
     /*else {
@@ -186,14 +180,95 @@ function optionSelected(answer) {
     for (i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
-    next_btn.classList.add("show"); //show the next button if user selected any option
+    next_btn.classList.add("show");
+    //show the next button if user selected any option
+    if (questions[que_count].marking === 1) {
+        if (questions[que_count].categories === "Openness") {
+            openScore += questions[que_count].options.indexOf(userAns) + 1;
+            openTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Conscientiousness") {
+            conScore += questions[que_count].options.indexOf(userAns) + 1;
+            conTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Extraversion") {
+            exScore += questions[que_count].options.indexOf(userAns) + 1;
+            exTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Agreeableness") {
+            agScore += questions[que_count].options.indexOf(userAns) + 1;
+            agTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Neuroticism") {
+            neuScore += questions[que_count].options.indexOf(userAns) + 1;
+            neuTotalScore += 5;
+        }
+    }
+    else if (questions[que_count].marking === 0) {
+        if (questions[que_count].categories === "Openness") {
+            openScore += 5 - questions[que_count].options.indexOf(userAns) - 1;
+            openTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Conscientiousness") {
+            conScore += 5 - questions[que_count].options.indexOf(userAns) - 1;
+            conTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Extraversion") {
+            exScore += 5 - questions[que_count].options.indexOf(userAns) - 1;
+            exTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Agreeableness") {
+            agScore += 5 - questions[que_count].options.indexOf(userAns) - 1;
+            agTotalScore += 5;
+        }
+        else if (questions[que_count].categories === "Neuroticism") {
+            neuScore += 5 - questions[que_count].options.indexOf(userAns) - 1;
+            neuTotalScore += 5;
+        }
+    }
 }
+// const apiKey = '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';
+// const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+
+// async function getChatResponse(prompt) {
+//     const response = await fetch(apiUrl, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'Authorization': `Bearer ${apiKey}`
+//         }
+//         // body: JSON.stringify({
+//         //     prompt: prompt,
+//         //     max_tokens: 100  // Adjust as per your requirement
+//         // })
+//     });
+
+//     const data = await response.json();
+//     return data.choices[0].text.trim();
+//}
+// getChatResponse("hello")
+//     .then(response => console.log('ChatGPT response:', response))
+//     .catch(error => console.error('Error:', error));
 
 function showResult() {
     info_box.classList.remove("activeInfo"); //hide info box
+
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
+    console.log("Openness scores " + openScore + " out of " + openTotalScore);
+    console.log("Consientiousness scores " + conScore + " out of " + conTotalScore);
+    console.log("Extrovertism scores " + exScore + " out of " + exTotalScore);
+    console.log("Agreeableness scores " + agScore + " out of " + agTotalScore);
+    console.log("Neurotism scores " + neuScore + " out of " + neuTotalScore);
+
+    let scoreTag = "<span><p>Openness scores </p>: " + openScore / openTotalScore * 100 + "%</span>" + "<span><p>Consientiousness scores </p>: " + conScore / conTotalScore * 100 + "%</span>" +
+        "<span><p>Extrovertism scores </p>: " + exScore / exTotalScore * 100 + "%</span>" +
+        "<span><p>Agreeableness scores </p>: " + agScore / agTotalScore * 100 + "%</span>" +
+        "<span><p>Neurotism scores </p>: " + neuScore / neuTotalScore * 100 + "%</span>";
+    scoreText.innerHTML = scoreTag;
+    //const prompt = "give me a 100 words description of a person with Openness " + openScore + " out of " + openTotalScore + "Consientiousness scores " + conScore + " out of " + conTotalScore + "Extrovertism scores " + exScore + " out of " + exTotalScore + "Agreeableness scores " + agScore + " out of " + agTotalScore + "Neurotism scores " + neuScore + " out of " + neuTotalScore;
+
     /*if (userScore > 3) { // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>and congrats! , You got <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
