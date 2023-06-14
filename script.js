@@ -38,11 +38,12 @@ submitButton.addEventListener('click', function (event) {
     });
 
     console.log(formData);
+    const formDataJSON = JSON.stringify(formData);
+    localStorage.setItem('Registraion details', formDataJSON);
     formContainer.remove();
     info_box.classList.add("activeInfo");
 });
 
-//just for commit
 // if exitQuiz button clicked
 exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //hide info box
@@ -267,6 +268,14 @@ function showResult() {
         "<span><p>Agreeableness scores </p>: " + agScore / agTotalScore * 100 + "%</span>" +
         "<span><p>Neurotism scores </p>: " + neuScore / neuTotalScore * 100 + "%</span>";
     scoreText.innerHTML = scoreTag;
+    const scoreInfo = {};
+    scoreInfo["Openness"] = openScore / openTotalScore;
+    scoreInfo["Consientiousness"] = conScore / conTotalScore;
+    scoreInfo["Extrovertism"] = exScore / exTotalScore;
+    scoreInfo["Agreeableness"] = agScore / agTotalScore;
+    scoreInfo["Neurotism"] = neuScore / neuTotalScore;
+    const scoreInfoJSON = JSON.stringify(scoreInfo);
+    localStorage.setItem("Scores", scoreInfoJSON);
     //const prompt = "give me a 100 words description of a person with Openness " + openScore + " out of " + openTotalScore + "Consientiousness scores " + conScore + " out of " + conTotalScore + "Extrovertism scores " + exScore + " out of " + exTotalScore + "Agreeableness scores " + agScore + " out of " + agTotalScore + "Neurotism scores " + neuScore + " out of " + neuTotalScore;
 
     /*if (userScore > 3) { // if user scored more than 3
@@ -318,7 +327,7 @@ function startTimerLine(time) {
     function timer() {
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-        if (time > 649) { //if time value is greater than 549
+        if (time > 549) { //if time value is greater than 549
             clearInterval(counterLine); //clear counterLine
         }
     }
