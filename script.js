@@ -10,6 +10,8 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+const apiUrl = 'http://127.0.0.1:5000/predict_personality';
+const formData = {};
 let openScore = 0;
 let openTotalScore = 0;
 let conScore = 0;
@@ -31,7 +33,6 @@ submitButton.addEventListener('click', function (event) {
     event.preventDefault(); // Prevent form submission
 
     const inputFields = formContainer.querySelectorAll('input, select');
-    const formData = {};
 
     inputFields.forEach(function (field) {
         formData[field.name] = field.value;
@@ -251,7 +252,30 @@ function optionSelected(answer) {
 //     .then(response => console.log('ChatGPT response:', response))
 //     .catch(error => console.error('Error:', error));
 
-function showResult() {
+async function showResult() {
+    var currentTime = new Date();
+    var respData;
+    const inputData = {
+        Gender: (formData.Gender === "Male" ? 1 : 2),
+        Age: parseInt(formData.DOB.slice(0,4)) - currentTime.getFullYear(),
+        openness: Math.round(openScore / openTotalScore * 10),
+        neuroticism: Math.round(neuScore / neuTotalScore * 10),
+        conscientiousness: Math.round(conScore / conTotalScore * 100),
+        agreeableness: Math.round(agScore / agTotalScore * 10),
+        extraversion: Math.round(exScore / exTotalScore * 10)
+      };
+      try {
+        const response = await axios.post("http://127.0.0.1:5000/predict_personality", inputData);
+        respData = response.data;
+    
+        console.log('Response:', data);
+        // Use the 'data' variable as needed in the rest of your code
+    
+      } catch (error) {
+        console.error('Error:', error);
+        // Handle errors here
+      }
+
     info_box.classList.remove("activeInfo"); //hide info box
 
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
@@ -266,7 +290,9 @@ function showResult() {
     let scoreTag = "<span><p>Openness scores </p>: " + Math.round(openScore / openTotalScore * 100) + "%</span>" + "<span><p>Consientiousness scores </p>: " + Math.round(conScore / conTotalScore * 100) + "%</span>" +
         "<span><p>Extrovertism scores </p>: " + Math.round(exScore / exTotalScore * 100) + "%</span>" +
         "<span><p>Agreeableness scores </p>: " + Math.round(agScore / agTotalScore * 100) + "%</span>" +
-        "<span><p>Neurotism scores </p>: " + Math.round(neuScore / neuTotalScore * 100) + "%</span>";
+        "<span><p>Neurotism scores </p>: " + Math.round(neuScore / neuTotalScore * 100) + "%</span>"+
+        "<span><p>Our AI predicts you are a</p>: " + respData.predicted_personality + " Person"
+        + "%</span>"
     scoreText.innerHTML = scoreTag;
     const scoreInfo = {};
     scoreInfo["Openness"] = openScore / openTotalScore;
