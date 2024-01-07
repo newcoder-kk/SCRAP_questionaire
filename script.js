@@ -292,8 +292,8 @@ async function showResult() {
         "<span><p>Extrovertism scores </p>: " + Math.round(exScore / exTotalScore * 100) + "%</span>" +
         "<span><p>Agreeableness scores </p>: " + Math.round(agScore / agTotalScore * 100) + "%</span>" +
         "<span><p>Neurotism scores </p>: " + Math.round(neuScore / neuTotalScore * 100) + "%</span>"+
-        "<span><p>Our AI predicts you are a</p>: " + respData.predicted_personality + " Person"
-        + "%</span>"
+        "<span><p>Our AI prediction</p>: " + respData.predicted_personality + " Person"
+        + "</span>"
     scoreText.innerHTML = scoreTag;
     const scoreInfo = {};
     scoreInfo["Openness"] = openScore / openTotalScore;
