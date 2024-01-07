@@ -251,6 +251,7 @@ function optionSelected(answer) {
 // getChatResponse("hello")
 //     .then(response => console.log('ChatGPT response:', response))
 //     .catch(error => console.error('Error:', error));
+//      new comment line
 
 async function showResult() {
     var currentTime = new Date();
